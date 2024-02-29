@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Configuración del documento -->
+        <meta charset="UTF-8"/> <!-- Codificación de caracteres -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Escalado para dispositivos móviles -->
+        <meta name="author" content="Orestes García Rojo" /> <!-- Autor del documento -->
+        <link rel="stylesheet" type="text/css" href="Style.css"/> <!-- Enlace a la hoja de estilos -->
+        <!-- Preconexión a recursos externos -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Enlace a la fuente de Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+        <!-- Título de la página -->
+        <title>Mi primer how to</title>
+    </head>
+    <body>
+        <!-- Título principal -->
+        <h1 class="encabezado , contenedor">Tutorial para compartir archivos con SAMBA</h1>
+
+        <!-- Paso 1 -->
+        <h2 class="titulo">Paso 1</h2>
+        <p class="cuerpo">
+            <!-- Instrucciones para el paso 1 -->
+            Arrancamos las máquinas Windows y Linux con una configuración de Red Nat que previamente hemos
+            creado.
+            Primero nos aseguramos de que tenemos completamente actualizados ambos sistemas: Windows y
+            Ubuntu. Podemos usar --help para obtener más información de cualquier comando.
+            En linux:
+            Procedemos a abrir la terminal e insertar los siguientes comandos:
+                <br>-su (necesitaremos introducir la contraseña que añadimos al principio en la instalación de la maquina virtual)</br>
+                <br>-apt upgrade</br>
+                <br>-apt update</br>   
+                <!-- Imágenes de ejemplo de los comandos -->
+                <br><br><img src="..\CAPTURAS\\5ubun.png" alt="Foto del comando su" />
+                <br><br><img src="..\CAPTURAS\\6ubun.png" alt="Foto del resultado del comando apt upgrade" />
+                <br><br><img src="..\CAPTURAS\\8u.png" alt="Foto del comando apt update y resultado">
+        </p>
+
+        <!-- Paso 2 -->
+        <!-- Título y descripción del paso 2 -->
+        <h2 class="titulo">Paso 2</h2>
+        <p class="cuerpo">A continuación procedemos a un videotutorial con la instalación de samba
+            <br><br><video width="640" height="360" controls>
+             <source src="..\CAPTURAS\\samba.mp4" type="video/mp4" alt="videotutorial de la instalación de samba">
+            </video> 
+            
+        </p>
+
+        <!-- Paso 3 -->
+        <!-- Título y descripción del paso 3 -->
+        <h2 class="titulo">Paso 3</h2>
+        <p class="cuerpo">
+            <!-- Instrucciones para el paso 3 -->
+            Creamos un nuevo usuario para conectarnos y compartir los documentos.
+                <br><br>    <img src="..\CAPTURAS\\10u.png" alt="Foto de como crear un nuevo usuario" />
+                <br><br>Dejamos vacios los valores de "Full name" a "Other" e introducimos la letra Y para finalizar.  
+        </p>
+
+        <!-- Los demás pasos siguen la misma estructura -->
+        <!-- Paso 4 -->
+        <h2 class="titulo">Paso 4</h2>
+        <p class="cuerpo">
+            <!-- Instrucciones para el paso 4 -->
+            Nos logamos como el usuario. Y vamos a su carpeta personal y creamos una nueva “compartida” a la que le damos permisos:
+                <br><br><img src="..\CAPTURAS\\11u.png" alt="Foto logueandonos como el nuevo usuario" /> 
+        </p>
+
+        <!-- Paso 5 -->
+        <h2 class="titulo">Paso 5</h2>
+        <p class="cuerpo">
+            <!-- Instrucciones para el paso 5 -->
+            Como Administrador instalamos vim. El editor de texto plano de Linux.
+                <br><br> <img src="..\CAPTURAS\\12u.png" alt="Foto instalando vim" />
+        </p>
+
+        <!-- Paso 6 -->
+        <h2 class="titulo">Paso 6</h2>
+        <p class="cuerpo">
+            <!-- Instrucciones para el paso 6 -->
+            Cuando está instalado, como root editamos con vim el archivo de configuración: 
+                <br><br><img src="..\CAPTURAS\\14u.png" alt="foto configuración de vim" />
+            <br>Dentro de Vim vamos al final y escribimos al final del documento (tecla Insert)
+            <br>Debemos escribir la configuración a mano desde "[carpeta_compartida]"
+                <br><br><img src="..\CAPTURAS\\13u.png" alt="foto de la configuración" />
+            <br>Salimos de vim pulsando escape y escribiendo:
+            <br>wq-> (write, quit)
+        </p>
+
+        <!-- Los demás pasos siguen la misma estructura -->
+        <!-- Paso 7 -->
+        <h2 class="titulo">Paso 7</h2>
+        <p class="cuerpo">
+            <!-- Instrucciones para el paso 7 -->
+            Ahora tenemos que añadir a winuser a los usuarios de samba y ponerle una contraseña (seguimos como root):
+                <br><br><img src="..\CAPTURAS\\15u.png" alt="Añadiendo winuser a samba" />
+        </p>
+
+        <!-- Paso 8 -->
+        <h2 class="titulo">Paso 8</h2>
+        <p class="cuerpo">
+            <!-- Instrucciones para el paso 8 -->
+            Ahora nos cambiamos al usuario winuser para crear un archivo dentro de la carpeta compartida.
+                <br><br><img src="..\CAPTURAS\\16u.png" alt="Foto cambiando a winuser" />
+        </p>
+
+        <!-- Paso 9 -->
+        <h2 class="titulo">Paso 9</h2>
+        <p class="cuerpo">
+            <!-- Instrucciones para el paso 9 -->
+            Ya solo nos queda resetear el servicio samba desde root.
+                <br><br><img src="..\CAPTURAS\\17u.png" alt="Foto reseteando samba como admin" />
+        </p>
+
+        <!-- Paso 10 -->
+        <h2 class="titulo">Paso 10</h2>
+        <p class="cuerpo">
+            <!-- Instrucciones para el paso 10 -->
+            Ahora miramos la dirección ip de la máquina (la otorga virtualbox) y la anotamos
+                <br><br><img src="..\CAPTURAS\\18u.png" alt="Foto de la dirección ip" />
+        </p>
+
+        <!-- Último paso -->
+        <h2 class="titulo">Último paso</h2>
+        <p class="cuerpo">
+            <!-- Instrucciones para el último paso -->
+            Nos vamos a Windows y habilitamos el uso compartido de archivos y carpetas y dentro de la
+            configuración avanzada del firewall habilitamos todas las reglas de “Archivos e impresoras compartidos”.
+            <br> A continuación, mediante ejecutar en Windows(Tecla Wn+R), insertamos la dirección ip obtenida en el paso 
+            previo en linux.
+            <br>Pulsamos aceptar y nos deberá aparecer la carpeta compartida entre la máquina virtual de Linux y Windows.
+            <br>Si ha dado resultado, los equipos estarían conectados entre sí.
+                <br><br><img src="..\CAPTURAS\\19.png" width="840" height="560" alt="Foto de la carpeta compartida" />
+            <br> A continuación observamos dos capturas, la terminal de ubuntu haciendo ping a la dirección de windows y la siguiente al revés.
+                <br><br><img src="..\CAPTURAS\\ping u.png" alt="Foto de la terminal de ubuntu haciendo ping a windows">
+                <br><br><img src="..\CAPTURAS\\ping w.png" alt="Foto de la terminal de windows haciendo ping a ubuntu">
+        </p>
+    </body>
+</html>
