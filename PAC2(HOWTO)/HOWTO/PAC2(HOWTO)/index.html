@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"><!--Lenguaje del documento html-->
     <head>
         <!-- Configuración del documento -->
         <meta charset="UTF-8"/> <!-- Codificación de caracteres -->
@@ -15,10 +15,10 @@
         <title>Mi primer how to</title>
     </head>
     <body>
-        <!-- Título principal -->
+        <!-- Título principal en el cual hemos insertado el estilo con "class" -->
         <h1 class="encabezado , contenedor">Tutorial para compartir archivos con SAMBA</h1>
 
-        <!-- Paso 1 -->
+        <!-- Paso 1 en el que insertamos los distintos estilos como "titulo" y "cuerpo"-->
         <h2 class="titulo">Paso 1</h2>
         <p class="cuerpo">
             <!-- Instrucciones para el paso 1 -->
@@ -28,10 +28,12 @@
             Ubuntu. Podemos usar --help para obtener más información de cualquier comando.
             En linux:
             Procedemos a abrir la terminal e insertar los siguientes comandos:
+            <!--Las etiquetas que contienen "br" son para el salto de linea, algunas líneas de código contienen dos de manera contínua
+            lo cual sirve para ajustar el espaciado entre líneas-->
                 <br>-su (necesitaremos introducir la contraseña que añadimos al principio en la instalación de la maquina virtual)</br>
                 <br>-apt upgrade</br>
                 <br>-apt update</br>   
-                <!-- Imágenes de ejemplo de los comandos -->
+                <!-- Imágenes de ejemplo de los comandos en la terminal-->
                 <br><br><img src="..\CAPTURAS\\5ubun.png" alt="Foto del comando su" />
                 <br><br><img src="..\CAPTURAS\\6ubun.png" alt="Foto del resultado del comando apt upgrade" />
                 <br><br><img src="..\CAPTURAS\\8u.png" alt="Foto del comando apt update y resultado">
@@ -41,7 +43,9 @@
         <!-- Título y descripción del paso 2 -->
         <h2 class="titulo">Paso 2</h2>
         <p class="cuerpo">A continuación procedemos a un videotutorial con la instalación de samba
+            <!--Después de video, ajustamos la anchura y altura mediante "width" y "height"-->
             <br><br><video width="640" height="360" controls>
+            <!--Introducimos el tipo de reproductor mediante la etiqueta "type"-->
              <source src="..\CAPTURAS\\samba.mp4" type="video/mp4" alt="videotutorial de la instalación de samba">
             </video> 
             
@@ -135,5 +139,9 @@
                 <br><br><img src="..\CAPTURAS\\ping u.png" alt="Foto de la terminal de ubuntu haciendo ping a windows">
                 <br><br><img src="..\CAPTURAS\\ping w.png" alt="Foto de la terminal de windows haciendo ping a ubuntu">
         </p>
+        <!--Insertamos un footer al cual le añadimos el mismo estilo que el encabezado pero en una clase llamada "pie"-->
+        <footer class="pie">Página web realizada por Orestes Jesús García Rojo. 1ºDAW|ALBOR CROFT
+        </footer>
     </body>
+<!--Cerramos el código-->
 </html>
